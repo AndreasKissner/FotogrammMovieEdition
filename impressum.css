@@ -1,0 +1,47 @@
+
+
+#impressum {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0 20px;
+    font-family: 'Terminator Genisys';
+}
+
+.impressum-container {
+    color: #b1b6b1; /* Grün für die Hauptüberschriften */
+    text-align: center;
+    max-width: 500px;
+    height: 380px;
+}
+
+.impressum-container h2, 
+.impressum-container h3 {
+    font-weight: bold;
+    font-size: 32px;
+    text-transform: uppercase;
+}
+
+.impressum-container h3 {
+    margin-top: 20px;
+}
+
+.impressum-container p {
+    font-size: 20px;
+    color: #abafab; /* Hellgrüne Schrift */
+}
+
+.impressum-container a {
+    cursor: pointer;
+    color: #a6aaaa; /* Blau für Links */
+    text-decoration: none;
+    font-style: italic;
+}
+
+.impressum-container a:hover {
+    text-decoration: underline;
+}
+
+.link_back {
+    font-size: 32px;
+}

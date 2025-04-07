@@ -1,0 +1,303 @@
+@font-face {
+    font-family: 'Terminator Genisys';
+    src: url('./fonts/TerminatorGenisys.woff2') format('woff2');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Star Jedi Logo DoubleLine2';
+    src: url('./fonts/StarJediLogoDoubleLine2.woff2') format('woff2');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    height: 100vh;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    background: #4a0404;
+    background-position: center;
+}
+
+#wrapper {
+    height: 100%;
+    flex: 1;
+}
+
+/* Style from overlay all over the Screen */
+.overlay_style {
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.8);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.main {
+    width: 100%;
+    max-width: 1920px;
+    height: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    padding: 0 40px;
+    justify-content: center;
+}
+
+/* Header  */
+
+#header_content {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    padding: 0px 20px 0;
+    width: 100%;
+    margin-bottom: auto;
+}
+
+#header_logo {
+    cursor: pointer;
+    width: 80px;
+    height: 80px;
+}
+
+#title_text {
+    font-family: 'Terminator Genisys';
+    font-size: 54px;
+    margin-left: 30px;
+    color: rgb(227, 180, 27);
+    text-shadow:
+        1px 1px 2px rgba(255, 80, 0, 0.7),
+        2px 2px 6px rgba(255, 140, 0, 0.5);
+}
+
+/* Container for the arrays img */
+.rendered_images {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;     /* zentriert alle .single_img */
+    align-items: flex-start;
+    gap: 20px;                   /* gleichmäßiger Abstand */
+    margin-top: 40px;
+    padding: 0;                  /* ← kein Padding-Shift mehr */
+}
+
+
+.single_img {
+    width: 180px;                /* feste Breite */
+    height: 150px;               /* feste Höhe */
+    object-fit: cover;           /* Bild wird nicht verzerrt */
+    display: block;
+    border-radius: 8px;
+  
+}
+
+
+
+.rendered_images img {
+    cursor: pointer;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: top;
+    margin-bottom: 10px;
+    border-radius: 25px;
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.3);
+    transition: transform 250ms ease, box-shadow 1s ease;
+    border: 2px solid rgb(227, 180, 27);
+}
+
+.rendered_images img:hover {
+    transform: rotateY(25deg) scale(1.1);
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.692);
+}
+
+/* Style for Box who are the Images inside */
+.overlay_inner {
+    position: fixed;
+    top: 5%;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 500px;
+    height: 570px;
+    align-items: center;
+    justify-content: flex-start;
+    padding: 0 10px;
+    background-image: url(img/bg_fotos.JPG);
+    background-size: cover;
+    background-position: center;
+    border-radius: 25px;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.5);
+}
+
+.overlay_inner p {
+    font-size: 40px;
+    color: #eb9c13;
+    margin: 0;
+    margin-bottom: 30px;
+}
+
+/* IMG big */
+.img_rendered_overlay {
+    cursor: pointer;
+    width: 100%;
+    border-radius: 25px;
+    height: 400px;
+    max-width: 500px;
+    object-fit: cover;
+    object-position: top;
+    border: 5px solid transparent;
+    box-sizing: border-box;
+    transition: border 0.2s ease;
+}
+
+.img_big_btn {
+    width: 50px;
+    height: 50px;
+}
+
+.btn_big_render {
+    display: flex;
+    width: 100%;
+    gap: 25px;
+    justify-content: center;
+    align-items: center;
+}
+/* Here you are the Btn left right and the counter number  */
+.counter_img_content {
+    display: flex;
+    flex-direction: column;
+    padding: 0 20px;
+    justify-content: center;
+    align-items: center;
+}
+/* Font-Size for number in Counter */
+.counter_img_content span {
+    font-family: 'Terminator Genisys';
+}
+
+/* BTN styele for Flash */
+.btn_click {
+    cursor: pointer;
+    background-color: transparent;
+    border: none;
+    transition: all 250ms ease;
+
+}
+
+.btn_click:hover {
+    cursor: pointer;
+    background-color: yellow;
+    border-radius: 25px;
+}
+
+/* footer */
+
+#footer {
+    width: 100%;
+    margin-top: auto;
+}
+
+#footer_content {
+    margin-top: auto;
+    display: flex;
+    width: 100%;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 30px;
+    gap: 12px;
+}
+
+#footer_logo {
+    width: 50px;
+    height: 50px;
+}
+
+#footer_title_text {
+    font-family: 'Terminator Genisys';
+    font-size: 38px;
+    flex: 1;
+    color: rgb(227, 180, 27);
+}
+
+.link_footer a {
+    cursor: pointer;
+    color: rgb(145, 136, 136);
+    text-decoration: none;
+    font-size: 36px;
+    font-family: 'Terminator Genisys', sans-serif;
+    text-shadow:
+        1px 1px 2px rgba(220, 217, 45, 0.7),
+        2px 2px 6px rgba(190, 240, 7, 0.5);
+    transition: all 250ms ease-in-out;
+}
+
+.link_footer a:hover {
+    font-size: 40px;
+    color: rgb(33, 33, 29);
+    text-shadow:
+        0 0 5px rgba(231, 238, 31, 0.9),
+        0 0 15px rgba(209, 212, 21, 0.6),
+        1px 1px 2px rgba(220, 217, 45, 0.7),
+        2px 2px 6px rgba(190, 240, 7, 0.5);
+}
+
+/* For hidden the Overlay */
+.d_none {
+    display: none;
+}
+
+/* Media Quaries */
+
+@media(max-width:720px) {
+    #footer_content {
+        flex-direction: column;
+    }
+}
+
+@media(max-width:600px) {
+    .main {
+        padding: 0;
+    }
+
+    #title_text {
+      /*   padding-right: 25px; */
+        font-size: 40px;
+        margin:0;
+    }
+
+    #header_content {
+        text-align: center;
+        flex-direction: column;
+    }
+
+    .overlay_inner {
+        width: 400px;
+    }
+}
+
+@media(max-width:450px) {
+    .overlay_inner {
+        width: 280px;
+    }
+
+    #impressum {
+        width: 200px
+    }
+    .rendered_images {
+      
+        padding: 0 15px;
+    }
+}
